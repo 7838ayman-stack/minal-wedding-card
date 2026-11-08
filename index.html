@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Minal Fiza & Salman Khan cordially invite you to their wedding ceremony on February 29, 2028."
+    />
+    <title>Minal &amp; Salman — Wedding Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <noscript>
+      <style>
+        .envelope-scene {
+          display: none;
+        }
+        body.is-locked {
+          overflow: auto;
+          height: auto;
+        }
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      </style>
+    </noscript>
+  </head>
+  <body class="is-locked">
+    <img
+      class="corner-flower corner-flower--left"
+      src="assets/top-cluster.png"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="corner-flower corner-flower--right"
+      src="assets/top-cluster.png"
+      alt=""
+      aria-hidden="true"
+    />
+
+    <div class="side-vine side-vine--left" aria-hidden="true"></div>
+    <div class="side-vine side-vine--right" aria-hidden="true"></div>
+
+    <div class="envelope-scene" id="envelopeScene">
+      <div class="envelope" id="envelope">
+        <div class="envelope__back"></div>
+        <div class="envelope__pocket"></div>
+        <div class="envelope__flap"></div>
+        <button
+          class="envelope__seal"
+          id="waxSeal"
+          type="button"
+          aria-label="Tap to open the invitation"
+        >
+          <span class="envelope__seal-text">Tap to open</span>
+        </button>
+      </div>
+      <p class="envelope-scene__hint">A little something, just for you</p>
+    </div>
+
+    <main class="invitation" id="invitation">
+      <section class="hero-cover">
+        <div class="hero-content">
+          <p class="small-text">We're getting married</p>
+          <div class="heart-divider">♥</div>
+
+          <!-- Apni sister aur unke fiance ka naam yahan daal -->
+          <h1 class="couple-names">
+            MINAL FIZA <span class="and-symbol">&</span> SALMAN KHAN
+          </h1>
+
+          <p class="parents-details">
+            Daughter of Mr. Shakil Ahmed & Mrs. Firdaus Begum<br />
+          </p>
+
+          <p class="parents-details">
+            Son of Mr. Usman Khan & Mrs. Abida Begum<br />
+          </p>
+        </div>
+
+        <!-- Scroll Indicator jo fountain ke theek upar aayega -->
+        <div class="scroll-indicator">
+          <p>SCROLL</p>
+          <span class="chevron">V</span>
+        </div>
+      </section>
+
+      <section class="section scratch" id="scratch">
+        <h2 class="section__title reveal">Scratch to Reveal</h2>
+        <p class="section__sub reveal" style="--d: 0.1s">
+          Gently swipe across the heart to uncover the details
+        </p>
+
+        <div class="heart-stage reveal" id="heartStage" style="--d: 0.2s">
+          <div class="heart-content">
+            <p class="heart-content__label">Save the Date</p>
+            <p class="heart-content__date">January 30, 2027</p>
+            <p class="heart-content__day">Saturday</p>
+            <p class="heart-content__time">07.00 PM</p>
+          </div>
+          <canvas
+            class="heart-canvas"
+            id="scratchCanvas"
+            aria-label="Scratch the silver heart to reveal the wedding date"
+          ></canvas>
+        </div>
+
+        <p class="heart-hint reveal" style="--d: 0.3s">
+          Use your finger or cursor
+        </p>
+        <button
+          class="btn reveal"
+          id="saveDateBtn"
+          type="button"
+          style="--d: 0.4s"
+        >
+          Save the Date
+        </button>
+      </section>
+
+      <section class="section countdown" id="countdown">
+        <h2 class="section__title reveal">Counting Down to Forever</h2>
+        <div class="countdown__grid reveal" style="--d: 0.15s">
+          <div class="countdown__block">
+            <span class="countdown__value" id="cdDays">00</span>
+            <span class="countdown__label">Days</span>
+          </div>
+          <div class="countdown__block">
+            <span class="countdown__value" id="cdHours">00</span>
+            <span class="countdown__label">Hours</span>
+          </div>
+          <div class="countdown__block">
+            <span class="countdown__value" id="cdMinutes">00</span>
+            <span class="countdown__label">Minutes</span>
+          </div>
+          <div class="countdown__block">
+            <span class="countdown__value" id="cdSeconds">00</span>
+            <span class="countdown__label">Seconds</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section timeline-section" id="program">
+        <h2 class="section__title reveal">Program Timeline</h2>
+        <div class="timeline">
+          <div class="timeline__item reveal">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <span class="timeline__time">7.00 PM</span>
+            <h3 class="timeline__title">Nikah Ceremony</h3>
+            <p class="timeline__desc">
+              The sacred exchange of vows and prayers as we unite our hearts for eternity in the presence of our loved ones.
+            </p>
+          </div>
+          <div class="timeline__item reveal" style="--d: 0.3s">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <span class="timeline__time">8:00 PM</span>
+            <h3 class="timeline__title">Dinner</h3>
+            <p class="timeline__desc">
+              Join us for a grand feast and warm conversations to celebrate this joyous occasion.
+            </p>
+          </div>
+          <div class="timeline__item reveal" style="--d: 0.15s">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <span class="timeline__time">10:00 PM</span>
+            <h3 class="timeline__title">Rukhsati</h3>
+            <p class="timeline__desc">
+              With heartfelt blessings and prayers, we bid a fond farewell to the bride as she embarks on her new journey.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section venue" id="venue">
+        <h2 class="section__title reveal">Venue</h2>
+        <h3 class="venue__name reveal" style="--d: 0.1s">
+          Aahil Villa banquet hall
+        </h3>
+        <p class="venue__address reveal" style="--d: 0.15s">
+          G-57, Eco Pk Rd, Pocket N, Madanpur Khadar, New Delhi, Delhi 110076
+        </p>
+
+        <div class="map-frame reveal" style="--d: 0.25s">
+          <iframe
+            src="https://maps.google.com/maps?q=Aahil%20villa%20banquets%2C%20New%20Delhi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            title="Map showing Grand Palace Hall, Jaipur"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <a
+          class="btn btn--ghost reveal"
+          style="--d: 0.35s"
+          href="https://www.google.com/maps/dir/?api=1&destination=Aahil+Villa+Banquets,+New+Delhi"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Open in Maps</a
+        >
+      </section>
+
+      <section class="section rsvp" id="rsvp">
+        <h2 class="section__title reveal">RSVP</h2>
+        <p class="section__sub reveal" style="--d: 0.1s">
+          Kindly let us know if you will be joining in our joy
+        </p>
+
+        <form
+          class="rsvp-form reveal"
+          id="rsvpForm"
+          style="--d: 0.2s"
+          novalidate
+        >
+          <div class="field">
+            <label class="field__label" for="guestName">Your Name</label>
+            <input
+              class="field__input"
+              id="guestName"
+              name="name"
+              type="text"
+              placeholder="e.g. Ayman Khan"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="attendance"
+              >Will you be attending?</label
+            >
+            <select
+              class="field__input field__input--select"
+              id="attendance"
+              name="attendance"
+              required
+            >
+              <option value="" selected disabled>Please choose</option>
+              <option value="yes">Yes, with pleasure!</option>
+              <option value="no">Regretfully, no</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="guestMessage">Your Message</label>
+            <textarea
+              class="field__input field__input--area"
+              id="guestMessage"
+              name="message"
+              rows="5"
+              placeholder="Write your wishes for the couple…"
+            ></textarea>
+          </div>
+
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <img
+          class="divider divider--sm reveal"
+          src="assets/floral-divider.png"
+          alt=""
+          width="240"
+          height="54"
+        />
+        <p class="footer__line reveal" style="--d: 0.1s">
+          We can&rsquo;t wait to celebrate with you!
+        </p>
+        <p class="footer__names reveal" style="--d: 0.2s">
+          Minal Fiza <span class="names__amp">&amp;</span> Salman Khan
+        </p>
+        <p class="footer__meta reveal" style="--d: 0.3s">
+          January 30, 2027 &middot; Aahil Villa banquet hall
+        </p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+.
