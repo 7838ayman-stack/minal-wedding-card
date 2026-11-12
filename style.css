@@ -282,7 +282,7 @@ textarea {
   z-index: 1;
   max-width: 920px;
   margin: 0 auto;
-  padding: 40px 24px 80px;
+  padding: 0 24px 80px;
 }
 
 .section {
@@ -819,58 +819,77 @@ textarea {
 .hero-content {
     width: 100%;
     max-width: 640px;
-    padding: clamp(150px, 19vh, 240px) 20px 0;
+    padding: 0 20px;
     font-family: var(--font-body);
     color: var(--ink);
+    position: relative;
+    z-index: 3;
 }
 
 .hero-content .small-text {
     font-size: clamp(0.95rem, 2.5vw, 1.15rem);
-    line-height: 1.4;
+    line-height: 1.35;
     letter-spacing: 0.4em;
     text-transform: uppercase;
     color: var(--blue-deep);
-    margin-bottom: 12px;
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+.getting-married-text {
+    margin-top: 0;
 }
 
 .heart-divider {
-    font-size: 1.15rem;
-    line-height: 1.2;
+    font-size: 1.05rem;
+    line-height: 1.1;
     color: var(--blue-deep);
-    margin-bottom: 6px;
+    margin-bottom: 2px;
 }
 
-.couple-names {
-    font-family: var(--font-script);
-    font-weight: 400;
-    font-size: clamp(3.4rem, 12vw, 6.4rem);
-    line-height: 1.08;
+.names-stack {
+    position: relative;
+    z-index: 3;
+}
+
+.bride-name,
+.groom-name {
+    font-family: var(--font-body), 'Playfair Display', serif;
+    font-weight: 700 !important;
+    font-size: clamp(1.95rem, 4.8vw, 3.15rem);
+    line-height: 1.12;
+    letter-spacing: 0.045em;
+    text-transform: capitalize;
     color: var(--blue-ink);
-    margin-bottom: 14px;
+    margin: 0;
+    position: relative;
+    z-index: 3;
 }
 
-.and-symbol {
+.weds-text {
+    font-family: var(--font-script), 'Great Vibes', cursive;
+    font-weight: 400 !important;
+    font-size: clamp(1.5rem, 3.6vw, 2.1rem);
+    line-height: 1.05;
     color: var(--blue-deep);
-    font-size: 0.72em;
-    vertical-align: middle;
-    padding: 0 0.08em;
+    margin: 0 0 2px;
+    position: relative;
+    z-index: 3;
 }
 
-.parents-details {
-    font-size: clamp(0.95rem, 2.4vw, 1.05rem);
-    line-height: 1.55;
+.parents-name {
+    font-size: clamp(0.86rem, 2.2vw, 1rem);
+    line-height: 1.35;
     color: var(--ink-soft);
-    margin-bottom: 10px;
+    margin: 0 0 4px;
+    position: relative;
+    z-index: 3;
 }
 
-.parents-details:last-of-type {
+.parents-name:last-of-type {
     margin-bottom: 0;
-}
-
-.parents-details .degree {
-    font-size: 0.84em;
-    letter-spacing: 0.08em;
-    color: var(--blue-deep);
+    padding: 0 15px;
+    z-index: 4;
 }
 
 /* FIX 2: corner florals hang ~281px down from the top of the scratch section,
@@ -942,14 +961,14 @@ h1, h2, h3 {
 }
 
 .hero-cover .hero-content {
-    transform: translateY(-20px);
-    padding-top: clamp(160px, 21vh, 260px);
+    transform: none;
+    padding-top: 0;
 }
 
 @media (max-width: 480px) {
     .hero-cover .hero-content {
-        transform: translateY(-8px);
-        padding-top: clamp(140px, 18vh, 190px);
+        transform: none;
+        padding-top: 0;
     }
 }
 
@@ -958,9 +977,9 @@ h1, h2, h3 {
     text-transform: capitalize !important;
     font-weight: 700 !important;
     font-size: clamp(2.2rem, 5.2vw, 3.5rem) !important;
-    line-height: 1.25 !important;
+    line-height: 1.15 !important;
     letter-spacing: 0.045em !important;
-    margin: 0 0 16px;
+    margin: 0 0 10px;
     background: linear-gradient(180deg, #46563f 0%, #2c3828 100%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -1020,14 +1039,14 @@ h1, h2, h3 {
 }
 
 .hero-cover .hero-content {
-    transform: translateY(-20px);
-    padding-top: clamp(160px, 21vh, 260px);
+    transform: none;
+    padding-top: 0;
 }
 
 @media (max-width: 480px) {
     .hero-cover .hero-content {
-        transform: translateY(-8px);
-        padding-top: clamp(140px, 18vh, 190px);
+        transform: none;
+        padding-top: 0;
     }
 }
 
@@ -1041,4 +1060,66 @@ h1, h2, h3 {
 .hero-cover .couple-names .and-symbol {
     color: #354230 !important;
     -webkit-text-fill-color: #354230 !important;
+}
+
+/* Styling for the header inside the curtain background */
+.inner-bismillah-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  /* Adjust this top margin/padding so it sits perfectly inside the upper drapes of the curtain */
+  padding-top: 14px;
+  margin-bottom: 4px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Logo Sizing */
+.bismillah-logo {
+  width: 100%;
+  max-width: 230px; /* Elegant sizing */
+  height: auto;
+  margin-bottom: 4px; /* keep the logo tightly grouped with the quote */
+  object-fit: contain;
+}
+
+/* Quote Typography */
+.bismillah-quote {
+  font-family: 'Playfair Display', 'Cinzel', serif; /* Use the card's existing elegant serif font */
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--ink, #5a3e36);
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-top: 0;
+}
+
+.bismillah-quote span {
+  font-style: italic;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* Narrow screens: the curtain valance dips lower, so drop the logo+quote
+   into the clear draped area below it */
+@media (max-width: 640px) {
+  .inner-bismillah-header {
+    padding-top: 86px;
+    margin-bottom: 3px;
+  }
+
+  .bismillah-logo {
+    max-width: 200px;
+    margin-bottom: 3px;
+  }
+}
+
+/* Adjust the existing container to accommodate the new header */
+/* Ensure the parent container has position: relative and its padding doesn't push this too far down */
+.hero-section, .body {
+  position: relative;
 }
